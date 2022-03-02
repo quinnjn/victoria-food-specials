@@ -1,3 +1,6 @@
+publish:
+	python3 index.py | tee index.md
+	
 run:
 	python3 index.py
 
