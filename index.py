@@ -9,11 +9,11 @@ def bigwheelburgerFeatures():
     html = session.get("https://bigwheelburger.com/menu/").html
     features = html.find('.single-feature')
     for feature in features:
-        text += feature.text + "\n"
+        text += "- {} \n".format(feature.text)
 
     return text
 
-def chocolatefavoris():
+def chocolatfavoris():
     expectedFlavours = [
         "Classic Dip Cone",
         "Cotton Candy",
@@ -53,12 +53,12 @@ def chocolatefavoris():
     flavours = filter(lambda flavour: flavour not in expectedFlavours, allFlavours)
 
     for flavour in flavours:
-        text += flavour + "\n"
+        text += "- {} \n".format(flavour)
 
     return text
 
 print()
-print("# bigwheelburger")
+print("# Big Wheel Burger")
 print(bigwheelburgerFeatures())
-print("# chocolate favoris special dips")
-print(chocolatefavoris())
+print("# Chocolat Favoris (Special Dips)")
+print(chocolatfavoris())
