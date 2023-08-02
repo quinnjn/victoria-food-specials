@@ -1,6 +1,7 @@
 import requests
 import json
 from requests_html import HTMLSession
+from uuid import uuid4
 
 session = HTMLSession()
 
@@ -45,7 +46,7 @@ def chocolatfavoris():
       'content-type': 'application/json',
       'x-ueatapikey': 'ff376cab-30e2-4cce-9999-ed755583c7f5',
       'x-ueatculture': 'en-CA',
-      'x-ueatsessionid': 'df3038b6-cd5f-4507-899e-e68f0c6a14cc'
+      'x-ueatsessionid': 'e317f902-598c-4c45-a629-13fcc68d260c',
     }
 
     response = requests.request("POST", url, headers=headers, data=payload)
